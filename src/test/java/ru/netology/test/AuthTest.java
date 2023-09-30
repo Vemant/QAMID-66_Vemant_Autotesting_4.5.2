@@ -79,7 +79,7 @@ public class AuthTest {
     @Test
     @DisplayName("Should get error message with blocked user")
     void shouldErrorBlockedUser() {
-        var blockedUser = getUser("blocked");
+        var blockedUser = getRegisteredUser("blocked");
         $("[data-test-id='login'] input").setValue(blockedUser.getLogin());
         $("[data-test-id='password'] input").setValue(blockedUser.getPassword());
         $("button.button").click();
